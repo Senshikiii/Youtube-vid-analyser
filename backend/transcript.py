@@ -16,6 +16,6 @@ def get_transcript(video_id):
 
 
 if __name__ == "__main__":
-    print(get_transcript('EI1ly8fzSmw'))
+    print(get_transcript('P62sLqal7w4'))
 
 
