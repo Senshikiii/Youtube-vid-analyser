@@ -1,4 +1,4 @@
-#import the stuff and then call it
+#import the stuff and then call the function by storing it in a new var
 from youtube_transcript_api import YouTubeTranscriptApi
 
 def get_transcript(video_id):
