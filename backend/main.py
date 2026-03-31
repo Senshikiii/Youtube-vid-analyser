@@ -3,6 +3,7 @@ from pydantic import BaseModel
 from transcript import get_transcript
 from analyzer import analyze
 
+
 app = FastAPI()
 
 class VideoRequest(BaseModel):

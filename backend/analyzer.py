@@ -24,7 +24,7 @@ def analyze(transcript_text): # wrapped the boilerplate code in the function
         - "sentiment": one of "positive", "neutral", or "negative"
         - "sentiment_reason": one sentence explaining why
 
-        Return only valid JSON. No markdown, no explanation, nothing else.: {transcript_text}""",
+        Return only valid JSON. No markdown, no explanation, nothing else.:""",
         config=types.GenerateContentConfig(
             thinking_config=types.ThinkingConfig(thinking_level="low"),
         ),
