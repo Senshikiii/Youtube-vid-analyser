@@ -24,15 +24,28 @@ export default function AnalyzePage() {
     setError('')
     setResult(null)
 
-    // Simulated API call - replace with your actual backend
-    setTimeout(() => {
-      setResult({
-        summary: 'This video provides a comprehensive overview of the topic, covering key concepts and practical applications. The content is well-structured and informative.',
-        sentiment: 'positive'
-      })
-      setLoading(false)
-    }, 1500)
-  }
+  try {
+  const response = await fetch('/api/analyze', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ url }),
+  })
+
+  const data = await response.json()
+  const parsed = typeof data === 'string' ? JSON.parse(data) : data
+  
+  setResult({
+    summary: parsed.summary,
+    sentiment: parsed.sentiment,
+  })
+} catch (err) {
+  setError('Something went wrong. Make sure the backend is running.')
+} finally {
+  setLoading(false)
+}
+
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
