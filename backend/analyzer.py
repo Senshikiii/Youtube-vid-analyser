@@ -380,7 +380,6 @@ om this trip. So, before I reveal what the final act of kindness is, t
 he one I drew back in the lounge, I just got to say, whether you are a
 t work or school or the grocery store or thousands of feet in the air 
 in a metal tube, if we all truly try to consider others more important"""
-
-print(analyze(sample_text))
+    print(analyze(sample_text))
 
 
