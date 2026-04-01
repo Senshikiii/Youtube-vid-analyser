@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export async function POST(request: NextRequest) {
   const body = await request.json()
   
-  const response = await fetch('http://127.0.0.1:8000/analyze', {
+  const response = await fetch('https://yt-analyzer-backend-cf39.onrender.com', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
