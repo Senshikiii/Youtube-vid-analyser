@@ -45,7 +45,7 @@ export default function AnalyzePage() {
 } finally {
   setLoading(false)
 }
-
+}
 
   return (
     <div className="min-h-screen bg-black text-white font-mono">
