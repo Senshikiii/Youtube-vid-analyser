@@ -3,9 +3,9 @@ import { Geist, Geist_Mono, IBM_Plex_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
-const _ibmPlexMono = IBM_Plex_Mono({ weight: "400", subsets: ["latin"] });
+const geist = Geist({ subsets: ['latin'] })
+const _geistMono = Geist_Mono({ subsets: ['latin'] })
+const _ibmPlexMono = IBM_Plex_Mono({ weight: '400', subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'LainIsReal - YouTube Video Analyzer',
@@ -37,11 +37,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={`${geist.className} font-sans antialiased`}>
         {children}
         <Analytics />
       </body>
     </html>
   )
 }
-
